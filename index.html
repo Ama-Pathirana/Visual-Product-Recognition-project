@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... (your existing head content) ... -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      #root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="file"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      #imagePreview {
+        text-align: center;
+      }
+
+      #previewImage {
+        max-width: 100%;
+        max-height: 300px;
+        margin-top: 10px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #00ced1; /* Turquoise background color */
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Image Upload Form -->
+      <form id="imageUploadForm" enctype="multipart/form-data">
+        <h2>Upload an Image</h2>
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          name="image"
+          required
+        />
+        <button type="button" id="uploadButton">Upload Image</button>
+      </form>
+
+      <!-- Display Uploaded Image (optional) -->
+      <div id="imagePreview" style="display: none">
+        <h2>Selected Image Preview:</h2>
+        <img id="previewImage" src="" alt="Selected" width="200" />
+      </div>
+    </div>
+
+    <script src="//frontend//src//App.tsx">
+
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const imageUploadForm = document.getElementById("imageUploadForm");
+      //   const imageInput = document.getElementById("imageInput");
+      //   const uploadButton = document.getElementById("uploadButton");
+      //   const imagePreview = document.getElementById("imagePreview");
+      //   const previewImage = document.getElementById("previewImage");
+
+      //   uploadButton.addEventListener("click", function () {
+      //     const file = imageInput.files[0];
+      //     if (file) {
+      //       const formData = new FormData();
+      //       formData.append("image", file);
+
+      //       // You can make an AJAX request (e.g., using fetch or XMLHttpRequest)
+      //       // to send the image data to your server.
+      //       // Example using fetch:
+      //       fetch("/upload", {
+      //         method: "POST",
+      //         body: formData,
+      //       })
+      //         .then((response) => {
+      //           // Handle the response from the server
+      //           if (response.status === 200) {
+      //             // Image uploaded successfully
+      //             imagePreview.style.display = "block";
+      //             previewImage.src = URL.createObjectURL(file);
+      //           } else {
+      //             // Handle errors
+      //             console.error("Image upload failed.");
+      //           }
+      //         })
+      //         .catch((error) => {
+      //           console.error("Network error:", error);
+      //         });
+      //     }
+      //   });
+      // });
+    </script>
+  </body>
+</html>
