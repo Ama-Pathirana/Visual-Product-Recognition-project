@@ -1,0 +1,8 @@
+torch
+numpy
+faiss-gpu
+cv2
+torchvision
+streamlit
+open-clip-torch
+gradio
